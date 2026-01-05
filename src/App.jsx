@@ -1,16 +1,16 @@
 import React, { useEffect, useRef, useState } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import myphoto from "./assets/img/myphoto.png";
-import myphoto2 from "./assets/img/myphoto2.png";
-import myphoto3 from "./assets/img/myphoto3.png";
-import myphoto4 from "./assets/img/myphoto4.png";
-import myphoto4Black from "./assets/img/myphoto4_black.png";
-import myphotoBg from "./assets/img/myphoto_bg.png";
-import myphotoCom from "./assets/img/myphtoCom.png";
 import myphotoFooter from "./assets/img/myphotoFooter.png";
 import myphotoPhone from "./assets/img/myphotoPhone.png";
-// import "./App.css"
+import bigdataLogo from "./assets/img/logo/bigdata.png";
+import datastreamsLogo from "./assets/img/logo/datastreams.svg";
+import forestLogo from "./assets/img/logo/forest.png";
+import kcureLogo from "./assets/img/logo/kcure.png";
+import korailLogo from "./assets/img/logo/korail.svg";
+import exLogo from "./assets/img/logo/ex.png";
+import samsungCardLogo from "./assets/img/logo/samsungCard.png";
+import samsungCardLogoDark from "./assets/img/logo/samsungCard_dark.svg";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -45,15 +45,6 @@ const App = () => {
       repeat: -1, // 무한 반복
     });
 
-    // Scrolling Text Animation (무한 반복)
-    // if (scrollTextRef.current) {
-    //   gsap.to(scrollTextRef.current, {
-    //     x: "-50%",
-    //     duration: 75,
-    //     ease: "none",
-    //     repeat: -1,
-    //   });
-    // }
     if (scrollTextRef.current) {
       gsap.to(scrollTextRef.current, {
         x: "-50%",
@@ -256,72 +247,72 @@ const App = () => {
       period: "2022.09 - 2022.12",
       desc: "웹 포털 운영 및 유지보수, 서브페이지 퍼블리싱 전담, 메인 및 소개 페이지 UI/UX 개편",
       tags: ["HTML", "CSS", "jQuery"],
+      logo: bigdataLogo,
+      link: "https://www.bigdata-covid.kr/",
     },
     {
       title: "K-CURE 운영관리 시스템 구축",
       period: "2023.01 - 2023.05",
       desc: "관리자 웹 퍼블리싱, amChart/슬라이드 라이브러리 적용, 모바일 반응형, 웹 접근성 인증 획득",
       tags: ["HTML", "CSS", "jQuery", "JavaScript", "amChart", "웹접근성"],
+      logo: kcureLogo,
+      link: "https://k-cure.mohw.go.kr/",
     },
-    // {
-    //   title: "감염병 분야 빅데이터 플랫폼 개편",
-    //   period: "2023.03",
-    //   desc: "메인 및 소개 페이지 UI/UX 개편",
-    //   tags: ["HTML", "CSS", "jQuery"],
-    // },
     {
       title: "포털 공통 기능 프로젝트 (사내)",
       period: "2023.05 - 2023.06",
       desc: "SI 포털 공통 기능 단독 퍼블리싱 - 권한/메뉴/게시판/사용자/코드/로그 관리",
       tags: ["HTML", "CSS", "jQuery"],
+      logo: datastreamsLogo,
     },
-    // {
-    //   title: "K-CURE 운영관리 시스템 (재투입)",
-    //   period: "2023.06 - 2023.12",
-    //   desc: "운영 시스템 안정화 및 유지보수, 웹 접근성 인증 작업 지원",
-    //   tags: ["유지보수", "웹접근성"],
-    // },
     {
       title: "산림 빅데이터 플랫폼 운영",
       period: "2024.01",
       desc: "Google Analytics 기반 통계 페이지 기획 및 퍼블리싱",
       tags: ["Google Analytics"],
+      logo: forestLogo,
+      link: "https://www.bigdata-forest.kr/",
     },
     {
-      title: "삼성카드 프로젝트 연구소 개발 지원",
+      title: "사내 제품(삼성카드 프로젝트) 연구소 개발 지원",
       period: "2024.01 - 2024.08",
       desc: "버전 업그레이드 소스 이관, 프론트 개발 지원",
       tags: ["FTL", "Handlebars", "JavaScript", "jQuery", "Ajax"],
+      logo: {
+        light: samsungCardLogo,
+        dark: samsungCardLogoDark,
+      },
     },
     {
       title: "철도공사 통합메타관리시스템 구축",
       period: "2024.08 - 2024.12",
       desc: "데이터 거버넌스 시스템 관리자 페이지 단독 퍼블리싱 (약 38개 페이지)",
       tags: ["HighCharts", "Ag-Grid", "데이터 시각화", "단독"],
+      logo: korailLogo,
+      link: "https://heewon7254.github.io/korail-prj/",
     },
     {
       title: "사내 제품 포탈 구축",
       period: "2025.01 - 2025.08",
       desc: "통합검색, 마이카탈로그, 데이터 요청/결재 등 핵심 기능 단독 퍼블리싱, 사용자/관리자단 구현",
       tags: ["적응형", "웹접근성", "컴포넌트 가이드", "단독"],
+      logo: datastreamsLogo,
+      link: "https://heewon7254.github.io/iruda-prj/",
     },
     {
       title: "한국도로공사 AI 업무 지원 시스템(사용자/관리자)",
       period: "2025.08 - 현재",
       desc: "React 기반 데이터 포털 퍼블리싱, 라이트/다크 테마, 사용자 설정 구현, 모바일 반응형",
       tags: ["React", "SCSS", "BEM", "Hooks", "웹접근성(WCAG 2.1)", "단독"],
+      logo: exLogo,
+      link: "https://heewon7254.github.io/ex-prj/",
     },
-    // {
-    //   title: "한국도로공사 AI 업무 지원 시스템 (관리자)",
-    //   period: "2025.08 - 현재",
-    //   desc: "관리자 페이지 퍼블리싱, 공통 컴포넌트 UI 구현",
-    //   tags: ["React", "테이블", "검색조건", "팝업", "토스트"],
-    // },
     {
       title: "사내 제품 포탈 QA 이슈 대응",
       period: "2025.12 - 현재",
       desc: "퍼블리싱/프론트 영역 수정, 입력값 검증/초기화 오류 등 버그 수정",
       tags: ["QA", "디버깅", "Git", "Jira"],
+      logo: datastreamsLogo,
     },
   ];
 
@@ -341,35 +332,17 @@ const App = () => {
   // // const accent   = theme === 'light' ? '#2B2520' : '#D4CDC4';
   // const accent = theme === 'light' ? '#4A3F35' : '#E2DACE'; // 따뜻한 잉크 브라운
 
-  const baseBg =
-    theme === "light"
-      ? "#FFFFFF" // 메인 배경
-      : "#0F1115"; // 다크 배경 (완전 블랙 X, 블루톤 유지)
+  const baseBg = theme === "light" ? "#FFFFFF" : "#0F1115";
 
-  const cardBg =
-    theme === "light"
-      ? "#FCF6EA" // 연한 섹션 배경
-      : "#1A1D24"; // 카드/섹션 배경
+  const cardBg = theme === "light" ? "#FCF6EA" : "#1A1D24";
 
-  const textMain =
-    theme === "light"
-      ? "#222222" // 본문 텍스트
-      : "#E6E8EC"; // 다크 메인 텍스트
+  const textMain = theme === "light" ? "#222222" : "#E6E8EC";
 
-  const textSub =
-    theme === "light"
-      ? "#5F6368" // 서브 텍스트
-      : "#9AA0A6"; // 다크 서브 텍스트
+  const textSub = theme === "light" ? "#5F6368" : "#9AA0A6";
 
-  const lineColor =
-    theme === "light"
-      ? "#e9e9e9ff" // 구분선
-      : "#2A2E36"; // 다크 구분선
+  const lineColor = theme === "light" ? "#e9e9e9ff" : "#2A2E36";
 
-  const accent =
-    theme === "light"
-      ? "#ACA37C" //  키워드 블루 포인트
-      : "#5B7CFF"; // 다크용 블루 (명도 ↑)
+  const accent = theme === "light" ? "#ACA37C" : "#5B7CFF";
 
   const styles = {
     portfolio: {
@@ -766,6 +739,29 @@ const App = () => {
       background: lineColor,
     },
 
+    workLogo: {
+      width: "100%",
+      height: "auto",
+      objectFit: "contain",
+      maxHeight: "150px",
+      // maxWidth: "12vw",
+      maxWidth: "clamp(180px, 12vw, 250px)",
+    },
+
+    workLink: {
+      display: "inline-block",
+      marginTop: "16px",
+      padding: "10px 20px",
+      border: `1px solid ${accent}`,
+      borderRadius: "6px",
+      color: accent,
+      textDecoration: "none",
+      fontSize: "14px",
+      letterSpacing: "1px",
+      transition: "all 0.3s ease",
+      cursor: "pointer",
+    },
+
     contact: {
       padding: "140px 0 100px",
       textAlign: "center",
@@ -963,9 +959,31 @@ const App = () => {
                       </span>
                     ))}
                   </div>
+                  {work.link && (
+                    <a
+                      href={work.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      style={styles.workLink}
+                    >
+                      View Project →
+                    </a>
+                  )}
                 </div>
                 <div style={styles.workThumbnail}>
-                  <div style={styles.thumbnailPlaceholder}>Project Image</div>
+                  {work.logo ? (
+                    <img
+                      src={
+                        typeof work.logo === "object"
+                          ? work.logo[theme]
+                          : work.logo
+                      }
+                      alt={work.title}
+                      style={styles.workLogo}
+                    />
+                  ) : (
+                    <div style={styles.thumbnailPlaceholder}>Project Image</div>
+                  )}
                 </div>
               </div>
             ))}
